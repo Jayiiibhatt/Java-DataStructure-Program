@@ -1,9 +1,9 @@
-class StackAlgorithm {
-  private int[] head;
-  private int pointer;
+public class StackAlgorithm {
+  int[] head;
+  int pointer;
 
   public StackAlgorithm(int capacity) {
-    head = new head[capacity];
+    head = new int[capacity];
     pointer = -1;
   }
 
@@ -14,8 +14,9 @@ class StackAlgorithm {
   public void push(int element) {
     if(pointer+1 < head.length) {
       head[++pointer] = element;
+      // return element;
     } else {
-      System.out.println("Stack Is Overflow.")
+      System.out.println("Stack Is Overflow.");
     }
   }
 
