@@ -11,13 +11,17 @@ public class StackAlgorithm {
     return pointer == -1;
   }
 
-  public void push(int element) {
+  public int push(int element) {
     if(pointer+1 < head.length) {
       head[++pointer] = element;
-      // return element;
+      return element;
     } else {
-      System.out.println("Stack Is Overflow.");
+      return 0;
     }
+  }
+
+  public int getPointer() {
+    return pointer;
   }
 
   public int pop() {
